@@ -77,20 +77,19 @@
       sliderQuantityCounter =
         +sliderFieldWidth.slice(0, sliderFieldWidth.length - 2) / width,
       sliderItemToShow = Math.round(sliderQuantityCounter),
-      sliderClicks = sliderItems.length - sliderItemToShow;
-
+      sliderClicks = sliderItems.length - sliderItemToShow,
+      swipe = new Hammer(sliderWrapper);
     let offSet = 0;
 
-    sliderPrevBtn.addEventListener("click", () => {
+    function prevBtn() {
       if (offSet === 0) {
         offSet = width * sliderClicks;
       } else offSet -= width;
 
       sliderWrapper.style.transform = `translateX(-${offSet}px)`;
-      console.log(offSet);
-    });
+    }
 
-    sliderNextBtn.addEventListener("click", () => {
+    function nextBtn() {
       if (offSet >= width * sliderClicks) {
         offSet = 0;
       } else {
@@ -98,7 +97,13 @@
       }
 
       sliderWrapper.style.transform = `translateX(-${offSet}px)`;
-      console.log(offSet);
-    });
+    }
+
+    sliderPrevBtn.addEventListener("click", prevBtn);
+
+    sliderNextBtn.addEventListener("click", nextBtn);
+
+    swipe.on("swiperight", prevBtn);
+    swipe.on("swipeleft", nextBtn);
   });
 }
