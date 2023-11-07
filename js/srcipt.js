@@ -79,6 +79,7 @@
       sliderItemToShow = Math.round(sliderQuantityCounter),
       sliderClicks = sliderItems.length - sliderItemToShow,
       swipe = new Hammer(sliderWrapper);
+
     let offSet = 0;
 
     function prevBtn() {
@@ -87,6 +88,7 @@
       } else offSet -= width;
 
       sliderWrapper.style.transform = `translateX(-${offSet}px)`;
+      console.log(offSet);
     }
 
     function nextBtn() {
@@ -97,6 +99,7 @@
       }
 
       sliderWrapper.style.transform = `translateX(-${offSet}px)`;
+      console.log(offSet);
     }
 
     sliderPrevBtn.addEventListener("click", prevBtn);

@@ -1,259 +1,276 @@
 {
   window.addEventListener("DOMContentLoaded", () => {
-    const catalogWrapper = document.querySelector(".catalog__item_wrapper");
-    const catalogLiWrapper = document.querySelector(
-      ".catalog__list_item-wrapper"
-    );
-    const catalogArray = [
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-      {
-        img: "white__tshirt.png",
-        name: "Футболка Біла",
-        price: "230",
-      },
-      {
-        img: "yellow__hoodie.png",
-        name: `Жовте Худі`,
-        price: "230",
-      },
-    ];
+    const catalogWrapper = document.querySelector(".catalog__item_wrapper"),
+      catalogLiWrapper = document.querySelector(".catalog__list_item-wrapper"),
+      catalogSelect = document.querySelector("#catalogOnPageId"),
+      catalogArray = [
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+        {
+          img: "white__tshirt.png",
+          name: "Футболка Біла",
+          price: "230",
+        },
+        {
+          img: "yellow__hoodie.png",
+          name: `Жовте Худі`,
+          price: "230",
+        },
+      ],
+      sliderPrevBtn = document.querySelectorAll(".catalog__list_btn")[0],
+      sliderNextBtn = document.querySelectorAll(".catalog__list_btn")[1];
+
+    let catalogItemsOnPage = 0;
+    let catalogCurrentPage = 1;
+    let catalogLiCounter = 0;
 
     catalogArray.forEach((el, index) => {
       el["id"] = index + 1;
     });
 
-    let catalogItemsOnPage = 16;
-    let catalogCurentPage = 1;
-    let catalogLiCounter = catalogArray.length / catalogItemsOnPage;
+    catalogNumCounter();
+    catalogLiMaker();
+    catalogUpdatePage(catalogCurrentPage);
+
+    catalogSelect.addEventListener("change", () => {
+      catalogNumCounter();
+      catalogLiMaker();
+      catalogUpdatePage(catalogCurrentPage);
+      console.log(catalogPageNum);
+    });
+
+    function catalogNumCounter() {
+      catalogItemsOnPage = parseInt(catalogSelect.value);
+      catalogLiCounter = Math.ceil(catalogArray.length / catalogItemsOnPage);
+    }
 
     function catalogLiMaker() {
       let html = "";
@@ -272,8 +289,6 @@
       catalogLiWrapper.innerHTML = html;
     }
 
-    catalogLiMaker();
-
     const catalogPageNum = document.querySelectorAll(
       ".catalog__list_item-wrapper li"
     );
@@ -282,9 +297,9 @@
       const start = (page - 1) * catalogItemsOnPage,
         end = start + catalogItemsOnPage,
         catalogNotes = catalogArray.slice(start, end);
-
+      console.log(start, end);
       let html = "";
-
+      catalogWrapper.innerHTML = "";
       catalogNotes.forEach((note) => {
         html += `
            <a href="card_open.html" class="catalog__item">
@@ -303,20 +318,58 @@
       catalogWrapper.innerHTML = html;
     }
 
-    catalogPageNum.forEach((el, index) => {
-      el.addEventListener("click", () => {
-        catalogCurentPage = index + 1;
-        catalogUpdatePage(catalogCurentPage);
-        const catalogLiChecked = catalogLiWrapper.querySelector(
-          ".catalog__list_checked"
-        );
-        if (catalogLiChecked) {
-          catalogLiChecked.classList.remove("catalog__list_checked");
+    function catalogChecked() {
+      const catalogLiChecked = catalogLiWrapper.querySelector(
+        ".catalog__list_checked"
+      );
+      if (catalogLiChecked) {
+        catalogLiChecked.classList.remove("catalog__list_checked");
+      }
+    }
+
+    let sliderItemIndex = 1;
+
+    sliderPrevBtn.addEventListener("click", () => {
+      if (sliderItemIndex === 1) {
+        sliderItemIndex = 1;
+      } else sliderItemIndex--;
+
+      console.log(sliderItemIndex);
+
+      catalogPageNum.forEach((el, index) => {
+        if (sliderItemIndex === index + 1) {
+          catalogCurrentPage = index + 1;
+          catalogUpdatePage(catalogCurrentPage);
+          catalogChecked();
+          el.classList.add("catalog__list_checked");
         }
-        el.classList.add("catalog__list_checked");
       });
     });
 
-    catalogUpdatePage(catalogCurentPage);
+    sliderNextBtn.addEventListener("click", () => {
+      if (sliderItemIndex + 1 >= catalogPageNum.length) {
+        sliderItemIndex = catalogPageNum.length;
+      } else sliderItemIndex++;
+
+      console.log(sliderItemIndex);
+
+      catalogPageNum.forEach((el, index) => {
+        if (sliderItemIndex === index + 1) {
+          catalogCurrentPage = index + 1;
+          catalogUpdatePage(catalogCurrentPage);
+          catalogChecked();
+          el.classList.add("catalog__list_checked");
+        }
+      });
+    });
+
+    catalogPageNum.forEach((el, index) => {
+      el.addEventListener("click", () => {
+        catalogCurrentPage = index + 1;
+        catalogUpdatePage(catalogCurrentPage);
+        catalogChecked();
+        el.classList.add("catalog__list_checked");
+      });
+    });
   });
 }
