@@ -80,26 +80,112 @@
       sliderClicks = sliderItems.length - sliderItemToShow,
       swipe = new Hammer(sliderWrapper);
 
-    let offSet = 0;
+    let offset = 0;
 
     function prevBtn() {
-      if (offSet === 0) {
-        offSet = width * sliderClicks;
-      } else offSet -= width;
+      if (offset === 0) {
+        offset = width * sliderClicks;
+      } else offset -= width;
 
-      sliderWrapper.style.transform = `translateX(-${offSet}px)`;
-      console.log(offSet);
+      sliderWrapper.style.transform = `translateX(-${offset}px)`;
+      console.log(offset);
     }
 
     function nextBtn() {
-      if (offSet >= width * sliderClicks) {
-        offSet = 0;
+      if (offset >= width * sliderClicks) {
+        offset = 0;
       } else {
-        offSet += width;
+        offset += width;
       }
 
-      sliderWrapper.style.transform = `translateX(-${offSet}px)`;
-      console.log(offSet);
+      sliderWrapper.style.transform = `translateX(-${offset}px)`;
+      console.log(offset);
+    }
+
+    sliderPrevBtn.addEventListener("click", prevBtn);
+
+    sliderNextBtn.addEventListener("click", nextBtn);
+
+    swipe.on("swiperight", prevBtn);
+    swipe.on("swipeleft", nextBtn);
+  });
+}
+//  TESTIMONIALS SLIDER
+{
+  window.addEventListener("DOMContentLoaded", () => {
+    const sliderContent = document.querySelector(
+        ".testimonials__slider_content"
+      ),
+      sliderPrevBtn = document.querySelectorAll(".testimonials__slider_btn")[0],
+      sliderNextBtn = document.querySelectorAll(".testimonials__slider_btn")[1],
+      sliderItems = document.querySelectorAll(".testimonials__slider_item"),
+      sliderItemHeight = window.getComputedStyle(sliderItems[0]).height,
+      height = +sliderItemHeight.slice(0, sliderItemHeight.length - 2),
+      sliderClicks = sliderItems.length - 1;
+
+    let offset = 0;
+
+    sliderPrevBtn.addEventListener("click", () => {
+      if (offset === 0) {
+        offset = height * sliderClicks;
+      } else offset -= height;
+      sliderContent.style.transform = `translate(-50%, -${offset}px)`;
+      console.log(offset);
+    });
+
+    sliderNextBtn.addEventListener("click", () => {
+      if (offset >= height * sliderClicks) {
+        offset = 0;
+      } else offset += height;
+      sliderContent.style.transform = `translate(-50%, -${offset}px)`;
+      console.log(offset);
+    });
+
+    console.log(height * sliderClicks);
+  });
+}
+// OFFER SLIDER
+{
+  window.addEventListener("DOMContentLoaded", () => {
+    const sliderWrapper = document.querySelector(".offer__slider_item-wrapper"),
+      sliderItems = document.querySelectorAll(".offer__slider_item"),
+      sliderPrevBtn = document.querySelectorAll(".offer__slider_btn")[0],
+      sliderNextBtn = document.querySelectorAll(".offer__slider_btn")[1],
+      sliderItemWidth = window.getComputedStyle(sliderItems[0]).width,
+      sliderField = document.querySelector(".offer__slider_item-field"),
+      sliderItemGap = window.getComputedStyle(sliderWrapper).gap,
+      width =
+        +sliderItemWidth.slice(0, sliderItemWidth.length - 2) +
+        +sliderItemGap.slice(0, sliderItemGap.length - 2),
+      sliderFieldWidth = window.getComputedStyle(
+        document.querySelector(".offer__slider_item-field")
+      ).width,
+      sliderQuantityCounter =
+        +sliderFieldWidth.slice(0, sliderFieldWidth.length - 2) / width,
+      sliderItemToShow = Math.round(sliderQuantityCounter),
+      sliderClicks = sliderItems.length - sliderItemToShow,
+      swipe = new Hammer(sliderWrapper);
+
+    let offset = 0;
+
+    function prevBtn() {
+      if (offset === 0) {
+        offset = width * sliderClicks;
+      } else offset -= width;
+
+      sliderWrapper.style.transform = `translateX(-${offset}px)`;
+      console.log(offset);
+    }
+
+    function nextBtn() {
+      if (offset >= width * sliderClicks) {
+        offset = 0;
+      } else {
+        offset += width;
+      }
+
+      sliderWrapper.style.transform = `translateX(-${offset}px)`;
+      console.log(offset);
     }
 
     sliderPrevBtn.addEventListener("click", prevBtn);

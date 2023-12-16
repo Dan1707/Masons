@@ -335,7 +335,7 @@
         sliderItemIndex = 1;
       } else {
         sliderItemIndex--;
-        updateCatalog();
+        catlogLiFunc();
       }
 
       console.log(sliderItemIndex, catalogLiWrapper.children.length);
@@ -346,7 +346,7 @@
         sliderItemIndex = catalogLiWrapper.children.length;
       } else {
         sliderItemIndex++;
-        updateCatalog();
+        catlogLiFunc();
       }
 
       console.log(sliderItemIndex, catalogLiWrapper.children.length);
@@ -358,11 +358,11 @@
           event.target
         );
         sliderItemIndex = index + 1;
-        updateCatalog();
+        catlogLiFunc();
       }
     });
 
-    function updateCatalog() {
+    function catlogLiFunc() {
       catalogCurrentPage = sliderItemIndex;
       catalogUpdatePage(catalogCurrentPage);
       catalogChecked();
